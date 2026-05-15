@@ -12,18 +12,16 @@ export default function Attendance({ data }: { data: ReturnType<typeof useAppDat
 
   return (
     <div className="space-y-4">
-      <div className="sticky top-20 z-30 bg-slate-50/80 backdrop-blur-md pb-2">
-        <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
-          <div className="p-2 bg-indigo-50 rounded-xl text-indigo-600">
-            <Calendar size={20} />
-          </div>
-          <input 
-            type="date" 
-            value={selectedDate} 
-            onChange={e => setSelectedDate(e.target.value)}
-            className="flex-1 outline-none font-bold text-slate-700 bg-transparent"
-          />
+      <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4 mb-2">
+        <div className="p-2 bg-indigo-50 rounded-xl text-indigo-600">
+          <Calendar size={20} />
         </div>
+        <input 
+          type="date" 
+          value={selectedDate} 
+          onChange={e => setSelectedDate(e.target.value)}
+          className="flex-1 outline-none font-bold text-slate-700 bg-transparent text-right"
+        />
       </div>
 
       <div className="space-y-3">
