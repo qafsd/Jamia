@@ -80,6 +80,7 @@ export default function App() {
           <button
             key={item.id}
             onClick={() => setCurrentView(item.id as View)}
+            aria-label={item.label}
             className={cn(
               "flex flex-col items-center p-2 transition-all duration-300 relative rounded-xl",
               currentView === item.id ? "text-indigo-600 scale-110" : "text-slate-400"

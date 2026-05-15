@@ -50,6 +50,7 @@ export default function Attendance({ data }: { data: ReturnType<typeof useAppDat
                 <div className="flex gap-2">
                   <button 
                     onClick={() => markAttendance(selectedDate, s.id, 'P')}
+                    aria-label={`حاضر: ${s.name}`}
                     className={`
                       px-4 py-2 rounded-xl font-bold transition-all flex items-center gap-1.5
                       ${status === 'P' 
@@ -62,6 +63,7 @@ export default function Attendance({ data }: { data: ReturnType<typeof useAppDat
                   </button>
                   <button 
                     onClick={() => markAttendance(selectedDate, s.id, 'A')}
+                    aria-label={`غیر حاضر: ${s.name}`}
                     className={`
                       px-4 py-2 rounded-xl font-bold transition-all flex items-center gap-1.5
                       ${status === 'A' 

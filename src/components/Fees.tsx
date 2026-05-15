@@ -40,6 +40,7 @@ export default function Fees({ data }: { data: ReturnType<typeof useAppData> }) 
                 
                 <button 
                   onClick={() => toggleFee(s.id, monthKey)}
+                  aria-label={`${isPaid ? 'ادا شدہ' : 'بقایا'} - ${s.name}`}
                   className={`
                     px-4 py-2.5 rounded-2xl text-[10px] font-bold urdu transition-all flex items-center gap-2
                     ${isPaid 

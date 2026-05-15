@@ -99,6 +99,7 @@ export default function Students({ data }: { data: ReturnType<typeof useAppData>
               </div>
               <button 
                 onClick={() => deleteStudent(s.id)}
+                aria-label={`حذف کریں: ${s.name}`}
                 className="p-2.5 text-slate-300 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
               >
                 <Trash2 size={18} />

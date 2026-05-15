@@ -122,11 +122,13 @@ export default function Reports({ data }: { data: ReturnType<typeof useAppData> 
               <div className="flex gap-2">
                 <button 
                   onClick={() => generatePDF(s.id)}
+                  aria-label={`ڈاؤن لوڈ رپورٹ برائے ${s.name}`}
                   className="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-100 active:scale-90 transition-all"
                 >
                   <Download size={20} />
                 </button>
                 <button 
+                  aria-label={`شیئر کریں ${s.name}`}
                   className="w-12 h-12 bg-white border border-slate-200 text-slate-400 rounded-2xl flex items-center justify-center active:scale-90 transition-all"
                 >
                   <Share2 size={18} />
