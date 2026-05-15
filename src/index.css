@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+}
+
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .urdu {
+    font-family: var(--font-urdu);
+    line-height: 2.2;
+  }
+  
+  .nav-shadow {
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hide scrollbars for a clean app feel */
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+}
